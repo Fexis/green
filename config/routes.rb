@@ -1,7 +1,7 @@
 Sample::Application.routes.draw do
   get "s_pages/home"
-
   get "s_pages/help"
+  get "s_pages/about"
 
 end
 
