@@ -1,8 +1,11 @@
 Sample::Application.routes.draw do
-  get "s_pages/home"
-  get "s_pages/help"
-  get "s_pages/about"
+  get "users/new"
 
+  root to: 's_pages#home'
+  match '/signup',  to: 'users#new'
+  match '/help',    to: 's_pages#help'
+  match '/about',   to: 's_pages#about'
+  match '/contact', to: 's_pages#contact'
 end
 
   # The priority is based upon order of creation:
