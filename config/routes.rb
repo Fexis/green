@@ -1,6 +1,6 @@
 Sample::Application.routes.draw do
-  get "users/new"
-
+  resources :users
+ 
   root to: 's_pages#home'
   match '/signup',  to: 'users#new'
   match '/help',    to: 's_pages#help'
