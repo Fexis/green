@@ -1,8 +1,11 @@
 Sample::Application.routes.draw do
   resources :users
- 
+  resources :sessions, only: [:new, :create, :destroy]
+  
   root to: 's_pages#home'
   match '/signup',  to: 'users#new'
+  match '/signin',  to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete
   match '/help',    to: 's_pages#help'
   match '/about',   to: 's_pages#about'
   match '/contact', to: 's_pages#contact'
